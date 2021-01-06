@@ -40,7 +40,8 @@ section {
 }
 /*-----------HEADINGS-------------*/
 h1,
-h2 {
+h2,
+h3 {
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -53,6 +54,10 @@ h2 {
   word-spacing: 4px;
   font-size: 220%;
   margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 150%;
 }
 h2:after {
   display: block;
@@ -103,7 +108,7 @@ header {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
 }
 .spiderlogo {
   height: 130px;
@@ -168,5 +173,34 @@ header {
 /* COMICS SECTION */
 /* -------------------------------------------- */
 .section-comics {
-  background-color: #e1eeff;
+  background-color: #e8eff7;
 }
+.comic-row {
+  margin-top: 70px;
+}
+.comic-row img {
+  height: auto;
+  width: 50%;
+  margin-right: 50px;
+}
+.img-cont {
+  text-align: right;
+}
+.text-cont {
+  padding: 0 2%;
+  text-align: justify;
+}
+.text-cont h3,
+.text-cont h3 + p {
+  text-align: center;
+}
+.text-cont h3 + p {
+  font-weight: 500;
+}
+
+/* .text-cont p:first-child {
+}
+
+.text-cont p {
+  width: 70%;
+} */

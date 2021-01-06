@@ -1,15 +1,20 @@
-"use strict";
+'use strict';
 const getMarvel = async function () {
   try {
     const response = await fetch(
-      "http://gateway.marvel.com/v1/public/characters?name=Spider-Man&ts=1&apikey=ad3a9015df220cd29480c245eff0a9de&hash=13e1ecb06b3ac00f45e9f3616e17942f"
+      'http://gateway.marvel.com/v1/public/characters?name=Spider-Man&ts=1&apikey=ad3a9015df220cd29480c245eff0a9de&hash=13e1ecb06b3ac00f45e9f3616e17942f'
     );
+    const responseComic = await fetch(
+      'http://gateway.marvel.com/v1/public/comics/62304?ts=1&apikey=ad3a9015df220cd29480c245eff0a9de&hash=13e1ecb06b3ac00f45e9f3616e17942f'
+    );
+
     if (!response.ok)
       throw new Error(`${response.status} ${response.statusText}`);
     console.log(response);
 
     const data = await response.json();
-    console.log(data);
+    const dataComic = await responseComic.json();
+    console.log(data.data, dataComic);
   } catch (err) {
     console.error(err);
   }

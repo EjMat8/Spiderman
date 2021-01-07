@@ -17,9 +17,7 @@ export const loadSpider = async function () {
       someComics: spiderData.comics.items
         .slice(8, 11)
         .map(comic => comic.resourceURI),
-      someSeries: spiderData.series.items
-        .slice(0, 3)
-        .map(series => series.resourceURI),
+      someSeries: spiderData.series.items.map(series => series.resourceURI),
     };
     console.log(state);
   } catch (err) {
@@ -58,7 +56,15 @@ export const loadComics = async function () {
 export const loadSeries = async function () {
   try {
     const seriesData = await getComicsOrSeries(false);
-    console.log(seriesData);
+
+    seriesData
+      .filter(ser => !ser.thumbnail.path.includes('image_not_available'))
+      .forEach(series => {
+        state.series.push({
+          seriesTitle: series.title,
+          seriesImage: series.thumbnail,
+        });
+      });
   } catch (err) {
     throw err;
   }

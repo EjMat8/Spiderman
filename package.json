@@ -1,0 +1,27 @@
+{
+  "name": "herowebsite",
+  "version": "1.0.0",
+  "description": "hero info",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist.dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EjMat8/Spiderman.git"
+  },
+  "author": "Franz Matugas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EjMat8/Spiderman/issues"
+  },
+  "homepage": "https://github.com/EjMat8/Spiderman#readme",
+  "dependencies": {
+    "core-js": "^3.8.2",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1"
+  }
+}

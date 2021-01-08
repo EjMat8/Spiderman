@@ -15,7 +15,7 @@ export const loadSpider = async function () {
       heroName: spiderData.name,
       heroDesc: spiderData.description,
       someComics: spiderData.comics.items
-        .slice(8, 11)
+        .slice(8, 12)
         .map(comic => comic.resourceURI),
       someSeries: spiderData.series.items.map(series => series.resourceURI),
     };
@@ -59,6 +59,7 @@ export const loadSeries = async function () {
 
     seriesData
       .filter(ser => !ser.thumbnail.path.includes('image_not_available'))
+      .slice(0)
       .forEach(series => {
         state.series.push({
           seriesTitle: series.title,

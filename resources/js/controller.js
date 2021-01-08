@@ -3,7 +3,7 @@ import 'regenerator-runtime/runtime';
 import * as model from './model.js';
 import headerView from './views/headerView.js';
 import comicView from './views/comicView.js';
-
+import seriesView from './views/seriesView.js';
 const controlComics = async function () {
   try {
     await model.loadComics();
@@ -15,27 +15,28 @@ const controlComics = async function () {
 const controlSeries = async function () {
   try {
     await model.loadSeries();
-    console.log(model.state.series);
+    seriesView.render(model.state.series);
   } catch (err) {
     console.log(err);
   }
 };
 
-const controlHeader = async function () {
+const controlMain = async function () {
   try {
+    headerView.renderSpinner();
     await model.loadSpider();
     headerView.render(model.state.heroSummary);
+    headerView.navScrolling();
+    headerView.scrollBtn();
+    await controlComics();
+    await controlSeries();
+    headerView.initRender();
   } catch (err) {
     console.log(err);
   }
 };
 
-const init = async function () {
-  await controlHeader();
-  await controlComics();
-  await controlSeries();
-};
-init();
+controlMain();
 
 // ad3a9015df220cd29480c245eff0a9de
 // 18070c18524b7728dcdc5b775eb967d4d94741ff8ad3a9015df220cd29480c245eff0a9de

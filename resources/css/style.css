@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:focus {
@@ -96,6 +97,8 @@ p {
   color: #447bbe;
   border: 1px solid #447bbe;
   border-radius: 15px;
+  -webkit-transition: color 0.2s, background-color 0.2s, border 0.2s;
+  -o-transition: color 0.2s, background-color 0.2s, border 0.2s;
   transition: color 0.2s, background-color 0.2s, border 0.2s;
   cursor: pointer;
 }
@@ -110,6 +113,16 @@ p {
 /* -------------------------------------------- */
 
 header {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(0, 0, 0, 0.7)),
+      to(rgb(0, 0, 0, 0.7))
+    ),
+    url(imgInCss/background-2.jpg);
+  background-image: -o-linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+    url(imgInCss/background-2.jpg);
   background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
     url(imgInCss/background-2.jpg);
   background-size: cover;
@@ -142,6 +155,8 @@ header {
 
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
+  -webkit-transition: border-left 0.3s, border-right 0.3s;
+  -o-transition: border-left 0.3s, border-right 0.3s;
   transition: border-left 0.3s, border-right 0.3s;
 }
 
@@ -155,6 +170,8 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-110%, -57%);
+  -ms-transform: translate(-110%, -57%);
   transform: translate(-110%, -57%);
   height: 90%;
   width: auto;
@@ -205,6 +222,7 @@ header {
   font-weight: 500;
 }
 .blur {
+  -webkit-filter: blur(20px);
   filter: blur(20px);
 }
 
@@ -213,6 +231,16 @@ header {
 /* -------------------------------------------- */
 
 .section-series {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgb(0, 0, 0, 0.55)),
+      to(rgb(0, 0, 0, 0.59))
+    ),
+    url(imgInCss/series-background.jpg);
+  background-image: -o-linear-gradient(rgb(0, 0, 0, 0.55), rgb(0, 0, 0, 0.59)),
+    url(imgInCss/series-background.jpg);
   background-image: linear-gradient(rgb(0, 0, 0, 0.55), rgb(0, 0, 0, 0.59)),
     url(imgInCss/series-background.jpg);
   background-size: cover;
@@ -246,6 +274,8 @@ header {
   border: 1px solid #3a6ba6;
   font-size: 120%;
   padding: 10px 15px;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  -o-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
   cursor: pointer;
 }
@@ -285,6 +315,8 @@ footer {
 .footer__info--link {
   color: #adadad;
   text-decoration: none;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
   transition: color 0.2s;
 }
 .footer__info--link:hover,
@@ -307,18 +339,14 @@ footer {
   height: 11em;
   border-radius: 50%;
   background: #447bbe;
-  background: -moz-linear-gradient(
-    left,
-    #447bbe 10%,
-    rgba(68, 123, 190, 0) 42%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    #447bbe 10%,
-    rgba(68, 123, 190, 0) 42%
-  );
   background: -o-linear-gradient(left, #447bbe 10%, rgba(68, 123, 190, 0) 42%);
-  background: -ms-linear-gradient(left, #447bbe 10%, rgba(68, 123, 190, 0) 42%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(10%, #447bbe),
+    color-stop(42%, rgba(68, 123, 190, 0))
+  );
   background: linear-gradient(to right, #447bbe 10%, rgba(68, 123, 190, 0) 42%);
   position: relative;
   -webkit-animation: load3 1.4s infinite linear;

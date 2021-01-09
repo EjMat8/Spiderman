@@ -16,10 +16,10 @@ export const loadSpider = async function () {
       heroDesc: spiderData.description,
       someComics: spiderData.comics.items
         .slice(8, 11)
-        .map(comic => comic.resourceURI),
+        .map(comic => comic.resourceURI.replace('http', 'https')),
       someSeries: spiderData.series.items
         .slice(10, 13)
-        .map(series => series.resourceURI),
+        .map(series => series.resourceURI.replace('http', 'https')),
     };
     console.log(state);
   } catch (err) {

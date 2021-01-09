@@ -15,9 +15,11 @@ export const loadSpider = async function () {
       heroName: spiderData.name,
       heroDesc: spiderData.description,
       someComics: spiderData.comics.items
-        .slice(8, 12)
+        .slice(8, 11)
         .map(comic => comic.resourceURI),
-      someSeries: spiderData.series.items.map(series => series.resourceURI),
+      someSeries: spiderData.series.items
+        .slice(10, 13)
+        .map(series => series.resourceURI),
     };
     console.log(state);
   } catch (err) {

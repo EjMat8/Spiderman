@@ -5,11 +5,11 @@ class SeriesView extends View {
   _generateMarkup() {
     return `<div class="row show-display">
     <img
-      src="${this._data[2].seriesImage.path}/standard_xlarge.${this._data[2].seriesImage.extension}"
+      src="${this._data[0].seriesImage.path}/standard_xlarge.${this._data[0].seriesImage.extension}"
       alt="Series Cover"
       class="series-picture "
     />
-    <h3 class="series-title">${this._data[2].seriesTitle}</h3>`;
+    <h3 class="series-title">${this._data[0].seriesTitle}</h3>`;
   }
 }
 export default new SeriesView();

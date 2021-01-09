@@ -111,15 +111,15 @@ p {
 
 header {
   background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
-    url(imgInCss/spiderbackground.jpg);
+    url(imgInCss/background-2.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
   background-attachment: fixed;
+  position: relative;
 }
 .spiderlogo {
   height: 130px;
-  width: auto;
   margin-top: 25px;
   float: left;
 }
@@ -166,7 +166,7 @@ header {
 }
 .text-part-header h1 {
   color: #ffffff;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   margin-bottom: 10px;
 }
 .text-part-header p {
@@ -217,7 +217,7 @@ header {
     url(imgInCss/series-background.jpg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 .heading-series {
   color: #ebebeb;

@@ -4,6 +4,9 @@ import * as model from './model.js';
 import headerView from './views/headerView.js';
 import comicView from './views/comicView.js';
 import seriesView from './views/seriesView.js';
+// if (module.hot) {
+//   module.hot.accept();
+// }
 const controlComics = async function () {
   try {
     await model.loadComics();

@@ -120,11 +120,11 @@ header {
       from(rgb(0, 0, 0, 0.7)),
       to(rgb(0, 0, 0, 0.7))
     ),
-    url(imgInCss/background-2.jpg);
+    url(imgInCss/back.jpg);
   background-image: -o-linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
-    url(imgInCss/background-2.jpg);
+    url(imgInCss/back.jpg);
   background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
-    url(imgInCss/background-2.jpg);
+    url(imgInCss/back.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;

@@ -9,6 +9,7 @@ class HeaderView extends View {
     ${this._data.heroDesc}
     </p>
     <h1 class="header-hero_name">${this._data.heroName}</h1>
+    <p>sup you suck</p>
     <button class="btn btn-show">SHOW ME MORE</button>`;
   }
   scrollBtn() {
